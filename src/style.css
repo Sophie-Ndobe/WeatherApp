@@ -1,3 +1,37 @@
 h1 {
-  color: blue;
+  color: #272142;
+  font-size: 38px;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+}
+p {
+  text-align: right;
+  margin-right: 135px;
+}
+
+.wrapper {
+  background: #f0efea;
+  border-radius: 16px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  margin-top: 20px;
+  padding: 40px;
+  width: 700px;
+}
+.temperature {
+  color: #212121;
+  font-size: 80px;
+  font-weight: 400;
+  font-weight: 700;
+  line-height: 1;
+  margin-left: 10px;
+}
+.units {
+  position: relative;
+  top: 0px;
+}
+.temperature-update {
+  justify-content: flex-end;
 }
