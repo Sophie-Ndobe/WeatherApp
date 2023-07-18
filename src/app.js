@@ -29,3 +29,38 @@ let day = days[date.getDay()];
 
 let currentDay = document.querySelector("#day");
 currentDay.innerHTML = `${day}`;
+
+function searchCity(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#city").value;
+  // console.log(cityInput);
+  let apiKey = "2c13e0a2b6fe347b0421bb02eef2o43t";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityInput}&key=${apiKey}`;
+
+  let heading = document.querySelector("h1");
+  heading.innerHTML = `${cityInput}`;
+
+  axios.get(`${apiUrl}`).then(displayWeather);
+}
+
+function displayWeather(response) {
+  let temperatureValue = Math.round(response.data.temperature.current);
+  let humidityValue = response.data.temperature.humidity;
+  let windSpeedValue = Math.round(response.data.wind.speed);
+  let descriptionValue = response.data.condition.description;
+
+  let temperatureUpdate = document.querySelector("#temperature");
+  temperatureUpdate.innerHTML = `${temperatureValue}`;
+
+  let humidityUpdate = document.querySelector("#humidity");
+  humidityUpdate.innerHTML = `${humidityValue}`;
+
+  let windSpeedUpdate = document.querySelector("#windspeed");
+  windSpeedUpdate.innerHTML = `${windSpeedValue}`;
+
+  let descriptionUpdate = document.querySelector("#description");
+  descriptionUpdate.innerHTML = `${descriptionValue}`;
+}
+
+let searchForm = document.querySelector("#form");
+searchForm.addEventListener("submit", searchCity);

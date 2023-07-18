@@ -16,6 +16,10 @@ p {
   margin-right: 135px;
 }
 
+.description {
+  text-transform: capitalize;
+}
+
 .form-control {
   width: 450px;
 }
