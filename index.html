@@ -56,8 +56,10 @@
                 <span class="description" id="description">Partly cloudy</span>
               </li>
               <li>
-                Humidity:<span id="humidity"> 73</span>%, Wind:
-                <span id="windspeed">2</span>km/h
+                Humidity:<span id="humidity" class="humidity"> 73</span
+                ><span class="units-fomular">%</span>, Wind:
+                <span id="windspeed" class="windspeed">2</span
+                ><span class="units-fomular">km/h</span>
               </li>
             </ul>
           </div>
@@ -66,8 +68,9 @@
             <div class="d-flex temperature-update">
               <img
                 src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                alt="sunny"
                 width="100px"
+                alt="sunny"
+                id="weather-icon"
               /><span class="temperature" id="temperature">12</span>
               <span class="units">
                 <span class="celcius-unit">°C </span>|
@@ -78,9 +81,13 @@
         </div>
       </div>
       <small
-        ><a href="https://github.com/Sophie-Ndobe/WeatherApp" target="blank">
+        ><a
+          href="https://github.com/Sophie-Ndobe/WeatherApp"
+          target="blank"
+          class="footer-link"
+        >
           Open-source code</a
-        >,<strong> by Sophie Ndobe</strong></small
+        >,<strong class="coder"> by Sophie Ndobe</strong></small
       >
     </div>
   </body>
