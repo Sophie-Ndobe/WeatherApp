@@ -52,14 +52,18 @@ p {
 .units {
   position: relative;
   top: 10px;
-  color: #6e6969;
+  color: orange;
   font-weight: 400;
 }
 
+.celcius-unit,
+.fahrenheit-unit {
+  text-decoration: none;
+}
 .units-fomular,
 .windspeed,
 .humidity {
-  color: chocolate;
+  color: orange;
 }
 .temperature-update {
   justify-content: flex-end;
