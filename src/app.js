@@ -30,7 +30,7 @@ let day = days[date.getDay()];
 let currentDay = document.querySelector("#day");
 currentDay.innerHTML = `${day}`;
 
-function searchCity() {
+function searchCity(city) {
   let cityInput = document.querySelector("#city").value;
 
   let apiKey = "2c13e0a2b6fe347b0421bb02eef2o43t";
@@ -77,4 +77,4 @@ searchForm.addEventListener("submit", searchCity);
 let fahrenheitConversion = document.querySelector("#fahrenheit-unit");
 fahrenheitConversion.addEventListener("click", convertToFahrenheit);
 
-searchCity("Paris");
+searchCity("Cape Town");
